@@ -1,16 +1,19 @@
 {
-  "version":2,
-  "builds":
-  [
-    {
-     "src":"*.js","use":"@vercel/node"
-    }
+  "version": 2,
+  "builds": [
+    { "src": "Buyer.js", "use": "@vercel/node" },
+    { "src": "Farmer.js", "use": "@vercel/node" },
+    { "src": "byveri.js", "use": "@vercel/node" },
+    { "src": "Login.js", "use": "@vercel/node" },
+    { "src": "sendotpf.js", "use": "@vercel/node" },
+    { "src": "verify.js", "use": "@vercel/node" }
   ],
-  "routes":[
-
-    {
-      "src":"/(.*)",
-      "dest":"/"
-    }
+  "routes": [
+    { "src": "/buyer", "dest": "/Buyer.js" },
+    { "src": "/farmer", "dest": "/Farmer.js" },
+    { "src": "/byveri", "dest": "/byveri.js" },
+    { "src": "/login", "dest": "/Login.js" },
+    { "src": "/sendotpf", "dest": "/sendotpf.js" },
+    { "src": "/verify", "dest": "/verify.js" }
   ]
 }
