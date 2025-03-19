@@ -2,13 +2,5 @@
   "version": 2,
   "builds": [
     { "src": "*.js", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/buyer", "dest": "/Buyer.js" },
-    { "src": "/farmer", "dest": "/Farmer.js" },
-    { "src": "/byveri", "dest": "/byveri.js" },
-    { "src": "/login", "dest": "/Login.js" },
-    { "src": "/sendotpf", "dest": "/sendotpf.js" },
-    { "src": "/verify", "dest": "/verify.js" }
   ]
 }
