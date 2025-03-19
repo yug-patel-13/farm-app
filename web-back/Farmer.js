@@ -183,6 +183,4 @@ app.use((req, res) => {
   res.status(404).send('Route not found');
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+module.exports = app;

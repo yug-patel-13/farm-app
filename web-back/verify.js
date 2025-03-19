@@ -43,6 +43,4 @@ app.post('/sendotp',async(req,res)=>{
       }
     });
     
-    app.listen(5555, () => {
-      console.log("Server running on http://localhost:5555");
-})
+    module.exports = app;

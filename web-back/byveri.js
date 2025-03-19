@@ -42,7 +42,4 @@ app.post('/sendotpp',async(req,res)=>{
         res.json({ success: false, error: 'Failed to generate OTP' });
       }
     });
-    
-    app.listen(5556, () => {
-      console.log("Server running on http://localhost:5556");
-})
+    module.exports = app;

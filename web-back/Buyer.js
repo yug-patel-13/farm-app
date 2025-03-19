@@ -70,7 +70,8 @@ app.put('/api/buyer/:id', (req, res) => {
     return res.status(400).json({ error: 'All fields are required' });
   }
 
-  const query = 'UPDATE buyer SET buyerName = ?, buyerNumber = ?, buyerEmail = ?, requiredCrop = ?, district = ?,  WHERE id = ?';
+  const query = 'UPDATE buyer SET buyerName = ?, buyerNumber = ?, buyerEmail = ?, requiredCrop = ?, district = ? WHERE id = ?';
+
   db.query(query, [buyerName, buyerNumber, buyerEmail, requiredCrop, district, id], (err, result) => {
     if (err) {
       return res.status(500).json({ error: err.message });
@@ -91,6 +92,4 @@ app.delete('/api/buyer/:id', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+module.exports = app;
