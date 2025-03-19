@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   const cors = require("cors");
 
 app.use(cors({
-  origin: "https://farm-app-mnqq.vercel.app",
+  origin: "https://farm-app-nine.vercel.app/",
   methods: "GET,POST,PUT,DELETE",
   credentials: true
 }));

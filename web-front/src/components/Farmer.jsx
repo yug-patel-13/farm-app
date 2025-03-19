@@ -77,10 +77,10 @@ const [timeLeftt, setTimeLeftt] = useState(0);
   useEffect(() => {
     const fetchFarmersAndBuyers = async () => {
       try {
-        const farmerResponse = await axios.get('https://farm-app-mnqq.vercel.app/farmer');
+        const farmerResponse = await axios.get('https://farm-app-nine.vercel.app/farmer');
         setFarmers(farmerResponse.data);
 
-        const buyerResponse = await axios.get('https://farm-app-mnqq.vercel.app/buyer');
+        const buyerResponse = await axios.get('https://farm-app-nine.vercel.app/buyer');
         setBuyers(buyerResponse.data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -100,7 +100,7 @@ const [timeLeftt, setTimeLeftt] = useState(0);
     }
 
     try {
-      const response = await axios.post('https://farm-app-mnqq.vercel.app/farmer', {
+      const response = await axios.post('https://farm-app-nine.vercel.app/farmer', {
         name,
         number,
         email,
@@ -143,7 +143,7 @@ const [timeLeftt, setTimeLeftt] = useState(0);
       return;
     }
     try {
-      const response = await axios.post('https://farm-app-mnqq.vercel.app/buyer', {
+      const response = await axios.post('https://farm-app-nine.vercel.app/buyer', {
         buyerName,
         buyerNumber,
         buyerEmail,
@@ -177,7 +177,7 @@ const [timeLeftt, setTimeLeftt] = useState(0);
 const send_buyer=async()=>{
 
     try {
-      const response = await axios.post('https://farm-app-mnqq.vercel.app/send-buy', { name,number,email, buyerEmail,buyerName});
+      const response = await axios.post('https://farm-app-nine.vercel.app/send-buy', { name,number,email, buyerEmail,buyerName});
   if(!name||!email)
   {
     alert("please fill the name or email");
@@ -205,7 +205,7 @@ const handleMouseEnter = (email, name) => {
 const ot=async()=>{
 
   try{
-  const response=await axios.post('https://farm-app-mnqq.vercel.app/sendotp', {email})
+  const response=await axios.post('https://farm-app-nine.vercel.app/sendotp', {email})
   if(!email){
     alert("enter email")
     return;
@@ -250,7 +250,7 @@ const verifyit=()=>{
 const ott=async()=>{
 
   try{
-  const responsee=await axios.post('https://farm-app-mnqq.vercel.app/sendotpp', {buyerEmail})
+  const responsee=await axios.post('https://farm-app-nine.vercel.app/sendotpp', {buyerEmail})
   if(!buyerEmail){
     alert("enter email")
     return;
