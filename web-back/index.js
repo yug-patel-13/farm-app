@@ -5,7 +5,14 @@ const port = 4000;
 app.get("/", (req, res) => {
     res.send("Hello, running!");
   });
-  
+  const cors = require("cors");
+
+app.use(cors({
+  origin: "https://farm-app-mnqq.vercel.app",
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true
+}));
+
 
 // Start the server
 app.listen(port, () => console.log(`Server running on port ${port}`));
