@@ -177,7 +177,7 @@ const [timeLeftt, setTimeLeftt] = useState(0);
 const send_buyer=async()=>{
 
     try {
-      const response = await axios.post('https://your-backend-name.vercel.app/send-buy', { name,number,email, buyerEmail,buyerName});
+      const response = await axios.post('https://farm-app-mnqq.vercel.app/send-buy', { name,number,email, buyerEmail,buyerName});
   if(!name||!email)
   {
     alert("please fill the name or email");
@@ -205,7 +205,7 @@ const handleMouseEnter = (email, name) => {
 const ot=async()=>{
 
   try{
-  const response=await axios.post('https://your-backend-name.vercel.app/sendotp', {email})
+  const response=await axios.post('https://farm-app-mnqq.vercel.app/sendotp', {email})
   if(!email){
     alert("enter email")
     return;
@@ -250,7 +250,7 @@ const verifyit=()=>{
 const ott=async()=>{
 
   try{
-  const responsee=await axios.post('https://your-backend-name.vercel.app/sendotpp', {buyerEmail})
+  const responsee=await axios.post('https://farm-app-mnqq.vercel.app/sendotpp', {buyerEmail})
   if(!buyerEmail){
     alert("enter email")
     return;

@@ -14,7 +14,7 @@ const Loginn = ({setloginchange}) => {
   const navigat=useNavigate()
   const handleLogin = async () => {
     try {
-      const response = await axios.post("https://your-backend-name.vercel.app/api/agritech/login", {
+      const response = await axios.post("https://farm-app-mnqq.vercel.app/api/agritech/login", {
         email: loginEmail,
         password: loginPassword,
       });
