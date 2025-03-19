@@ -59,7 +59,7 @@ const Login = ({setloginchange}) => {
   };
 const verif=async()=>{
   try {
-    const response = await axios.post('http://localhost:5555/sendotp', {email});
+    const response = await axios.post('https://your-backend-name.vercel.app/sendotp', {email});
 if(!email)
 {
   alert("please fill the name or email");
