@@ -1,0 +1,40 @@
+#select{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+color: white;
+justify-content: center;
+align-items: center;
+
+}
+
+#iam{
+  color: yellow;
+  margin-right: 5px;
+}
+#partpado{
+  height: 500px;
+  position: relative;
+  top:150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+#f1,#f2{
+  height: 300px;
+  width: 300px;
+  margin: 50px;
+}
+#entf,#entb{
+  height: 40px;
+  width: 200px;
+  border-radius: 7px;
+  background-color: yellow;
+  color: bleck;
+}
+#entf:hover,#entb:hover{
+  background-color: gold;
+}

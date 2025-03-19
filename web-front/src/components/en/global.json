@@ -1,0 +1,135 @@
+{
+    "header":{
+
+    "welcome_message": "Welcome to Agri Mitra",
+    "description": "Revolutionizing Agriculture, One Step at a Time!",
+    "vision_title": "🌟 Our Vision",
+    "vision_content": "Agri Mitra’s vision is to become the largest agricultural fair-trade platform, connecting farmers to industries around the globe.",
+    "mission_title": "🎯 Our Mission",
+    "mission_content": "Agri Mitra’s mission is to become THE global reference for DIGITAL agricultural food crop transactions through a complete PLATFORM solution.",
+    "focus_title": "🔍 Our Focus & Experience",
+    "focus_content": "Agri Mitra is a team of experts leveraging knowledge in Farming, Industry Procurement, Digital Business, and Disruptive Innovation. We aim to redistribute value throughout the agriculture supply chain by being agile, reliable, and transparent."
+  },
+  "other":{
+
+    "welcome":"welcom to AgriMitra",
+    "agritech": "AgriTech Titans' Assured Contract Farming Platform",
+    "home":"Home",
+    "aboutus":"about-us",
+    "login":"Login",
+    "benefits":"benifits",
+    "welcome_message": "Welcome to AgriTech Titans",
+    "description": "Revolutionizing Agriculture, One Step at a Time!",
+    "what_our_platform_offers":"what our platform offers",
+    "hiw":"how it works",
+ 
+      "connects": "Connects farmers with buyers",
+      "secures": "Secures transparent contracts",
+      "supports": "Supports price negotiation",
+      "ensures": "Ensures reliable payments",
+      "offers": "Offers market insights",
+      "priceNegotiation": "Price Discovery and Negotiation",
+      "educationalResources": "Educational Resources",
+      "feedback": "Feedback and Ratings",
+ 
+      "farmer": "Discover crop availability and farmer profiles",
+      "buyers": "Browse buyer profiles and contract needs",
+      "payments": "Fast, safe, and transparent transactions",
+      "contractFarming": "Initiate and manage secure contracts",
+      "trackContracts": "Monitor progress and ensure timely delivery",
+      "support": "Access FAQs, guides, and support",
+  
+      
+        "title": "Create a Contract",
+        "description": "Farmers post their crop details, and buyers browse offers.",
+    
+        "title2": "Negotiate and Sign",
+        "description2": "Both parties agree on terms and sign the contract digitally.",
+     
+        "title3": "Track and Pay",
+        "description3": "Track the contract's progress, confirm delivery, and release payment securely.",
+      
+    
+    
+      "startContract": "Start a Contract",
+      "joinMessage": "Join AgriTech Titans and secure your future with stable contracts and guaranteed market access."
+    
+  
+  
+
+},
+
+"loginnn":{
+  "name":"name",
+  "email":"email",
+  "password":"password",
+  "already":"already have an account",
+  "new":"new user? click here"
+  
+},
+
+  "formSelection": {
+    "title": "Select Form:",
+    "farmer": "Farmer",
+    "buyer": "Buyer"
+  },
+  "farmer": {
+    "formTitle": "Farmer's Form",
+    "submitSuccess": "Farmer information submitted successfully!"
+  },
+  "buyer": {
+    "formTitle": "Buyer's Form",
+    "submitSuccess": "Buyer information submitted successfully!",
+    "filteredBuyers": "Filtered Buyers",
+    "noBuyers": "No buyers found for the selected crop and district.",
+    "contractWith": "Contract with"
+  },
+  "form": {
+    "name": "Name",
+    "namePlaceholder": "Enter your name",
+    "number": "Phone Number",
+    "numberPlaceholder": "Enter your phone number",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "cropName": "Crop Name",
+    "selectCrop": "Select Crop",
+    "cropQuantity": "Crop Quantity",
+    "quantityPlaceholder": "Enter quantity",
+    "price": "Price",
+    "pricePlaceholder": "Enter price",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter description",
+    "selectDistrict": "Select District",
+    "selectDistrictOption": "Choose a district"
+  },
+  "validation": {
+    "fillAllFields": "Please fill all fields correctly."
+  },
+  "error": {
+    "message": "An error occurred",
+    "noResponse": "No response from the server.",
+    "generic": "Error"
+  },
+  "otp": {
+    "success": "OTP sent successfully to your email.",
+    "failure": "Failed to send OTP.",
+    "error": "Error sending OTP."
+  },
+  "cropNames": {
+    "cotton": "Cotton",
+    "groundnut": "Groundnut",
+    "wheat": "Wheat",
+    "rice": "Rice",
+    "sugarcane": "Sugarcane",
+    "bajra": "Bajra",
+    "jowar": "Jowar",
+    "sesame": "Sesame",
+    "tobacco": "Tobacco",
+    "maize": "Maize",
+    "pulses": "Pulses",
+    "castor": "Castor",
+    "mustard": "Mustard",
+    "chickpea": "Chickpea"
+  }
+}
+

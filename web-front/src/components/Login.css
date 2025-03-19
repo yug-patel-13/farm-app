@@ -1,0 +1,225 @@
+#boxpass {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  text-align: center;
+margin-top: 10%;
+}
+
+#namebox, #emailbox, #passbox, #btnbox {
+  margin-bottom: 15px;
+}
+
+
+#sended{
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 5%;
+  height: 30px;
+  margin-top: 5px;
+}
+#sended:hover{
+  background-color: blueviolet;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#bbbutton {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#loginn {
+  
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+#loginn {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  margin-top: 20%;
+}
+
+#messagebox {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+@media (max-width:1741px) {
+
+  #boxpass,#loginn{
+    margin-top: 27%;
+  }
+  
+}
+@media (max-width:907px) {
+
+  #boxpass,#loginn{
+    margin-top: 100%;
+  }
+  
+}
+/* General admin container styling */
+/* General container for the admin section */
+.admin-container {
+  position: relative;
+  margin-top: 20%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Admin heading */
+.admin-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #4caf50;
+  margin-bottom: 15px;
+}
+
+/* Admin table styling */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 20px; /* Additional margin for spacing */
+}
+
+.admin-table th {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.admin-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Hover effect for rows */
+.admin-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Admin-specific table border styles */
+.admin-table th:first-child,
+.admin-table td:first-child {
+  border-left: 2px solid #4caf50;
+}
+
+.admin-table th:last-child,
+.admin-table td:last-child {
+  border-right: 2px solid #4caf50;
+}
+
+/* Ensure the admin section aligns properly */
+.admin-section {
+  position: relative;
+  margin-top: 20%; /* Center it with respect to the page */
+  text-align: center;
+}
+#loginbox {
+  width: 100%;
+  max-width:500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20%;
+}
+
+#loginbox1 {
+  margin-bottom: 20px;
+}
+
+#logmail {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+#mailval, #passval {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+/* Admin Section */
+.admin-section {
+  margin: 20px;
+  margin-top: 20%;
+}
+
+.admin-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th, .admin-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.admin-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.admin-row {
+  transition: background-color 0.3s ease;
+}
+
+.admin-row:hover {
+  background-color: #e9e9e9;
+}

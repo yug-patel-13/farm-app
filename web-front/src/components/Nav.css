@@ -1,0 +1,165 @@
+.Nav {
+  position: fixed;
+ 
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+margin-bottom: 100px;
+}
+
+.Nav.hidden {
+  top: -80px; /* Adjust based on navbar height */
+}
+
+.Nav.visible {
+  top: 0;
+}
+
+
+#links,.Nav{
+top: 0px;
+left: 0px;
+
+
+    display: flex;
+    flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+  z-index:1;   
+ background-color: green;
+ width: 100%;
+ height: auto;
+}
+
+
+#lgo{
+
+
+position: relative;
+margin-right: 60%;
+
+  
+}
+
+#l1,#l2,#l3,#l4{
+
+display: flex;
+flex-wrap: wrap;    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    padding-left: 40px;
+    transition: 0.5s;
+  
+}
+@media (max-width:1200px) {
+
+
+
+#links {
+position: relative;
+  top: 0 /* Adjust the top value as needed */
+ 
+ 
+
+}
+
+
+}
+#l1{
+    color: yellow;
+}
+#l1:hover,#l2:hover,#l3:hover,#l4:hover{
+  text-decoration: underline;
+}
+
+#login{
+  margin: 30px;
+  height: 50px;
+  width: 120px;
+  border-radius: 40px;
+  background-color: yellow;
+  color:black;
+  font-size: 20px;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+ 
+}
+#login:hover{
+    background-color:gold;
+}
+#cv,#cv1,#cv2{
+  height: 150px;
+}
+
+#btn1lan{
+  top: 30%;
+  height: 20px;
+  width: 60px;
+  background-color: blue;
+  color: white;
+  border: none;
+
+}
+
+#con{
+
+  display: flex;
+  justify-content: center;
+  
+  position: relative;
+  
+  
+}
+
+
+
+@media (max-width:1200px) {
+
+  #links{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+#login{
+  position: relative;
+  left: 12%;
+}
+#lgo{
+  position: relative;
+  left:32%;
+}
+}
+#btn1lan{
+  border: none;
+  height: 30px;
+  width: 70px;
+  border-radius: 10px;
+  border-bottom: 2px solid yellow;
+}
+#btn2lan{
+  border: none;
+  height: 30px;
+  width: 70px;
+  border-radius: 10px;
+  background-color: red;
+  margin-left: 10px;
+  color: aliceblue;
+  border-bottom: 2px solid yellow;
+}
+#btn1lan:hover,#btn2lan:hover{
+  background-color: greenyellow;
+  color: black;
+}
+#langbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

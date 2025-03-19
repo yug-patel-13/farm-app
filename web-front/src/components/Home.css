@@ -1,0 +1,551 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for Smooth Scrolling and Centering */
+#content {
+    scroll-behavior: smooth;
+    position: relative;
+   margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+/* Box with Hover Animation */
+#box {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    flex-direction: column;
+ height: auto;
+ width: auto;
+ padding: 10px;
+ margin-right: 10%;
+    border: 10px solid white;
+    border-left: none;
+    border-radius: 40px;
+}
+
+#box:hover {
+    animation: backgroundPulse 3s infinite alternate;
+}
+
+@keyframes backgroundPulse {
+    0% {
+        background-color: rgba(0, 255, 0, 0);
+    }
+    50% {
+        background-color: rgba(0, 255, 0, 0.5);
+    }
+}
+
+/* Box2 Styling */
+#box2 {
+    position: relative;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ height: auto;
+ width: auto;
+ flex-wrap: wrap;
+
+
+}
+#imges{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+@media (max-width:1200px) {
+
+    #content{
+       
+        display: flex;
+        flex-direction: column;
+margin-top: 300px;
+ 
+        
+    }
+    #box2{
+        margin-top: 20px;
+    }
+
+}
+@media (max-width:1300px){
+    #imges{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Image Styling */
+
+/* Agricultural Text Styling */
+#agri {
+    display: flex;
+    font-size: 60px;
+    font-weight: bolder;
+    border-bottom: 7px solid white;
+    animation: colour 2s linear infinite;
+    transition: 1s;
+    flex-wrap: wrap;
+}
+
+@keyframes colour {
+    0% {
+        color: green;
+    }
+    33% {
+        color: yellow;
+    }
+    66% {
+        color: lightgreen;
+    }
+    100% {
+        color: orange;
+    }
+}
+
+#agri::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 750px;
+    border-bottom: 3px solid #333;
+    margin-top: 10px;
+}
+
+/* Line Styling */
+#line {
+    width: 600px;
+}
+
+/* Flexbox Container Styling */
+#first, #second {
+    display: flex;
+}
+
+/* Navigation Item Styling */
+#far, #buy, #payment, #sup {
+    margin-left: 10px;
+}
+
+#far::after, #buy::after, #payment::after, #sup::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 5px;
+    border-bottom: 3px solid white;
+}
+
+/* Kissan Styling */
+#kissan {
+    position: relative;
+    left: 70%;
+    top: -60%;
+    height: 75px;
+    width: 200px;
+    font-size: 30px;
+    border-radius: 40px;
+    background-color: greenyellow;
+}
+
+/* Copy Styling */
+#copy1, #copy2, #copy3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    right: 20px;
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    border-radius: 60px;
+    border: 5px solid white;
+    transition: 0.2s;
+    background-color: #ecebe4;
+    flex-wrap: wrap;
+}
+
+#copy1:hover, #copy2:hover, #copy3:hover {
+    border: 5px solid yellow;
+    transform: scale(1.1);
+}
+
+/* Experience Text Styling */
+#exp {
+    margin-left: 20px;
+    color: #1c6a4c;
+}
+
+/* Image Sizes */
+#p1p, #v1p, #b1p {
+    height: 100px;
+    width: 100px;
+}
+
+/* Plate Styling */
+#plate {
+    position: relative;
+    top: 90px;
+    left: 10%;
+    color: white;
+}
+
+#plate::after {
+    display: block;
+    content: "";
+    width: 500px;
+    height: 5px;
+    border-bottom: 5px solid yellow;
+}
+
+/* Slider Styling */
+#slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    width: 1000px;
+    overflow: hidden;
+}
+
+#ig {
+    height: 200px;
+    width: 400px;
+    animation: slider 10s ease-in-out infinite;
+    margin: 10px;
+    transition: 2s;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(-20%);
+    }
+    40% {
+        transform: translateX(-40%);
+    }
+    60% {
+        transform: translateX(-60%);
+    }
+    80% {
+        transform: translateX(-80%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Center Styling */
+#center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contain Styling */
+#contain {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 150px;
+}
+
+@media (max-width:1200px) {
+    #div1,#div2{
+    display: flex;
+    flex-direction: column;
+    }
+}
+/* Flexbox Divs */
+#div1, #div2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Box Styling */
+#bx1, #bx2, #bx3, #bx4, #bx5, #bx6 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    width: 400px;
+    padding: 10px;
+    border: 8px solid white;
+    border-radius: 20px;
+    border-bottom: 20px solid yellow;
+    margin: 10px;
+    background: green;
+ 
+}
+#diss{
+    margin-right: 20%;
+}
+
+/* Mer Styling */
+#mer::after {
+    content: "";
+    display: block;
+    width: 400px;
+    border-bottom: 5px solid yellow;
+}
+@media (max-width:1200px) {
+ 
+    #bx1,#bx2,#bx3,#bx4,#bx5,#bx6{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 200px;
+
+    }
+    #dis{
+        position: relative;
+     height: 100px;
+     width: 200px;
+        }
+.ano{
+    font-size: 30px;
+}
+#mer{
+    width: 250px;
+    height: 200px;
+    font-size: smaller;
+}
+    
+}
+@media (max-width:1200px){
+    #mer::after{
+        
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: none;
+       
+    }
+}
+
+/* We Do Styling */
+#wedo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Cro Styling */
+#cro {
+    height: 300px;
+
+}
+@media (max-width:1200px) {
+    #cro{
+        height: 100px;
+    }
+    
+}
+#create{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+@media (max-width:1200px) {
+    #hand,#hand2{
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+
+    }
+}
+/* Hand Styling */
+#hand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Curved Box Styling */
+#crv1, #crv2, #crv3 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: #1c6a4c;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 350px;
+    background-color: #ecebe4;
+    border-radius: 0 0 50% 50%;
+    margin-top: 20px;
+    margin: 10px;
+}
+
+@media (max-width:1200px){
+    #crv1,#crv2,#crv3{
+        height: 350px;
+        width: 300px;
+    }
+    #h6{
+        display: none;
+    }
+}
+/* How It Works Styling */
+#hiw {
+    position: relative;
+    color: white;
+    left: 10%;
+}
+
+#hiw2 {
+    position: relative;
+    color: white;
+    left: 10%;
+}
+
+#hiw::after {
+    content: "";
+    display: block;
+    width: 300px;
+    border-bottom: 5px solid yellow;
+}
+
+#hiw2::after {
+    content: "";
+    display: block;
+    width: 300px;
+    border-bottom: 5px solid yellow;
+}
+
+/* Join Button Styling */
+#join {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 10%;
+    color: white;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: auto;
+    
+}
+
+
+/* Hand2 Styling */
+#hand2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Curved Boxes for Hand2 */
+#crv11, #crv22, #crv33 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100px;
+    width: 300px;
+    border: 5px solid white;
+    margin: 30px;
+    border-radius: 20px;
+    border-bottom: 30px solid white;
+    background-color: green;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#crv11:hover, #crv22:hover, #crv33:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+/* Navigation Links */
+#l1, #l2, #l3, #l4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    padding-left: 40px;
+    transition: 0.5s;
+}
+
+#l1 {
+    color: yellow;
+}
+
+#l1:hover, #l2:hover, #l3:hover, #l4:hover {
+    text-decoration: underline;
+}
+
+/* Login Button Styling */
+#login {
+    margin: 30px;
+    height: 50px;
+    width: 120px;
+    border-radius: 40px;
+    background-color: yellow;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+}
+
+#login:hover {
+    background-color: gold;
+}
+
+/* CV Image Sizes */
+#cv, #cv1, #cv2 {
+    height: 150px;
+    width: 150px;
+}
+
+
+#container{
+    overflow: hidden;
+  }
+
+  @media (max-width:1200px) {
+
+
+   
+  }
+
+  @media (max-width:800px){
+    #agri{
+       border: none;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+  }
