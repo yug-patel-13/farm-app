@@ -3,13 +3,8 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
-
-const generateOTP = () => {
-  return Math.floor(1000 + Math.random() * 9000).toString();
-}
 
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
@@ -17,13 +12,14 @@ const transporter = nodemailer.createTransport({
     user: 'yug.patel.sings01@gmail.com',
     pass: 'xrxnqefrvnvmzocp',
   }
-})
+});
 
 app.post('/send-buy', async (req, res) => {
-  const { name,number,email,buyerName, buyerEmail } = req.body;
- 
-  const otp = generateOTP();
+  const { name, number, email, buyerName, buyerEmail } = req.body;
 
+  if (!name || !number || !email || !buyerName || !buyerEmail) {
+    return res.json({ success: false, error: 'All fields are required' });
+  }
 
   const message = `
   Hello ${buyerName},
@@ -34,23 +30,22 @@ app.post('/send-buy', async (req, res) => {
   - Number: ${number}
   - Email: ${email}
 
-  farmer wait for your call or email..
+  The farmer is waiting for your call or email.
 
   Hope your contract will be successful.
-`;
-
+  `;
 
   try {
     await transporter.sendMail({
       from: 'yug.patel.sings01@gmail.com',
       to: buyerEmail,
-      subject: 'Your email verification',
-      text: message // Corrected property name here
+      subject: 'Farmer Contract Request',
+      text: message,
     });
-    res.json({ success: true,otp:otp });
+    res.json({ success: true, message: 'Email sent successfully!' });
   } catch (error) {
-    console.error('Error sending OTP:', error);
-    res.json({ success: false, error: 'Failed to generate OTP' });
+    console.error('Error sending email:', error);
+    res.json({ success: false, error: 'Failed to send email' });
   }
 });
 
