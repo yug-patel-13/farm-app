@@ -57,32 +57,32 @@ const Login = ({setloginchange}) => {
     alert("error occures")
     }
   };
-  const verif = async () => {
-    if (!email) {
-      alert("Please enter an email");
-      return;
+const verif=async()=>{
+  try {
+    const response = await axios.post('https://farm-app-nine.vercel.app', {email});
+if(!email)
+{
+  alert("please fill the name or email");
+  return;
+}
+    if (response.data.success) {
+     
+      console.log("OTP sent to email:", response.data.otp); // Debug log for OTP
+      
+      alert('OTP sent to your email');
+      setotpp(true)
+      setotp(response.data.otp)
+
+    } else {
+      alert('Failed to send OTP');
     }
-  
-    try {
-      const response = await axios.post(
-        "https://farm-app-nine.vercel.app/api/sendotp", 
-        { email }
-      );
-  
-      if (response.data.success) {
-        console.log("OTP sent to email:", response.data.otp);
-        alert("OTP sent to your email");
-        setotpp(true);
-        setotp(response.data.otp);
-      } else {
-        alert("Failed to send OTP");
-      }
-    } catch (error) {
-      console.error("Error sending OTP:", error);
-      alert("Error sending OTP, please try again.");
-    }
-  };
-  
+  } catch (error) {
+    console.error('Error sending OTP:', error);
+    alert('Error sending OTP, please try again.');
+  }
+
+
+}
 const verify=()=>{
   if(hereotp===otp){
 setver(true)
