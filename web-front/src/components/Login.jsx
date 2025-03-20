@@ -61,11 +61,13 @@ const Login = ({ setloginchange }) => {
 
     try {
       setLoadingOTP(true);
-      const response = await axios.post('farm-app-nine.vercel.app/sendotp', { email }, {
-        headers: {
-          "Content-Type": "application/json",
+      const response = await axios.post('https://farm-b6becpaam.vercel.app/sendotp', 
+        { email },
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: true,  // ✅ Ensures cookies/session handling
         }
-      });
+      );
 
       if (response.data.success) {
         console.log("OTP sent:", response.data.otp);
@@ -81,7 +83,7 @@ const Login = ({ setloginchange }) => {
     } finally {
       setLoadingOTP(false);
     }
-  };
+};
 
   const verifyOTP = () => {
     if (hereotp.toString() === otp.toString()) {

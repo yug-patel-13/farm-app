@@ -14,22 +14,23 @@ const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
     user: "yug.patel.sings01@gmail.com",
-    pass: "xrxnqefrvnvmzocp",
+    pass: "xrxnqefrvnvmzocp",  // ❌ SECURITY WARNING: DO NOT STORE PASSWORDS IN CODE! Use environment variables.
   },
 });
 
 app.post("/sendotp", async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "https://farm-app-fk44.vercel.app");
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Credentials", "true");
+
+  if (req.method === "OPTIONS") return res.sendStatus(200); // ✅ Handle preflight requests
+
   const { email } = req.body;
-  
-  if (!email) {
-    return res.json({ success: false, error: "Email is required!" });
-  }
+  if (!email) return res.json({ success: false, error: "Email is required!" });
 
   const otp = generateOTP();
-  const message = `
-    Confirm your email with this OTP:
-    ${otp}
-  `;
+  const message = `Confirm your email with this OTP: ${otp}`;
 
   try {
     await transporter.sendMail({
@@ -42,7 +43,7 @@ app.post("/sendotp", async (req, res) => {
     res.json({ success: true, otp: otp });
   } catch (error) {
     console.error("Error sending OTP:", error);
-    res.json({ success: false, error: "Failed to send OTP" });
+    res.status(500).json({ success: false, error: "Failed to send OTP" });
   }
 });
 
