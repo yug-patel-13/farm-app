@@ -4,30 +4,27 @@ import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-
-
-const Loginn = ({setloginchange}) => {
+const Loginn = ({ setloginchange }) => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [t] = useTranslation("global");
 
-  const navigat=useNavigate()
+  const navigate = useNavigate();
+
   const handleLogin = async () => {
     try {
-      const response = await axios.post("https://farm-app-mnqq.vercel.app/api/agritech/login", {
-        email: loginEmail,
-        password: loginPassword,
-      });
+      const response = await axios.post(
+        "https://farm-app-nine.vercel.app/api/agritech/login",
+        { email: loginEmail, password: loginPassword },
+        { headers: { "Content-Type": "application/json" } }
+      );
 
-      if (response.data.success ) {
+      if (response.data.success) {
         alert("Successful login");
         setLoginEmail("");
         setLoginPassword("");
-        navigat("/Farmer")
-        setloginchange("welcomee")
-
-       
-        
+        navigate("/Farmer");
+        setloginchange("welcomee");
       } else {
         alert("Invalid email or password");
       }
@@ -37,12 +34,8 @@ const Loginn = ({setloginchange}) => {
     }
   };
 
-
-
-
   return (
     <div>
-    
       <div id="loginn">
         <div id="emailbox">
           <h1>{t("loginnn.email")}</h1>
@@ -53,7 +46,7 @@ const Loginn = ({setloginchange}) => {
             placeholder="Enter your email"
           />
         </div>
-    
+
         <div id="passbox">
           <h1>{t("loginnn.password")}</h1>
           <input
@@ -63,7 +56,7 @@ const Loginn = ({setloginchange}) => {
             placeholder="Enter your password"
           />
         </div>
-    
+
         <div id="btnbox">
           <button
             onClick={handleLogin}
@@ -76,23 +69,25 @@ const Loginn = ({setloginchange}) => {
           >
             Login
           </button>
-          <Link to="/admin"><button  style={{
-              height: "30px",
-              width: "110px",
-              background: "green",
-              color: "white",
-              marginLeft:"10px"
-            }}>login as admin</button></Link>
+
+          <Link to="/admin">
+            <button
+              style={{
+                height: "30px",
+                width: "110px",
+                background: "green",
+                color: "white",
+                marginLeft: "10px",
+              }}
+            >
+              Login as Admin
+            </button>
+          </Link>
         </div>
-        <Link to="/login">{t("loginnn.new")}</Link>
+
+        <Link to="/register">{t("loginnn.new")}</Link>
       </div>
-  
-    
-
-
-
     </div>
-    
   );
 };
 
