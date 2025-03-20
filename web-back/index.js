@@ -1,20 +1,26 @@
-const app = require("./Farmer.js"); // Import buyer.js
-const port = 4000;
+const express = require("express");
+const cors = require("cors");
 
-// Route to display message when accessing the root URL
+const app = express();
+
+
+app.use(cors({
+    origin: "https://farm-app-fk44.vercel.app", // Change * to frontend domain for security
+    methods: "GET, POST",
+    credentials: true
+}));
+
+app.use(express.json()); // Ensure JSON body parsing
+
+// ✅ Import and use routes from Farmer.js (if it contains routes)
+const farmerRoutes = require("./Farmer.js");
+app.use(farmerRoutes);
+
+// ✅ Define test route
 app.get("/", (req, res) => {
     res.send("Hello, running!");
-  });
+});
 
-
-  const cors = require("cors");
-  app.use(cors({
-    origin: "*", // Allow all origins (change this later for security)
-    methods: "GET,POST",
-    credentials: true
-  }));
-  
-
-
-// Start the server
+// ✅ Start server
+const port = 4000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
