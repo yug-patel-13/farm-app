@@ -5,12 +5,12 @@ const app = express();
 
 
 app.use(cors({
-    origin: "https://farm-app-fk44.vercel.app", // Change * to frontend domain for security
+    origin: "https://farm-app-fk44.vercel.app", 
     methods: "GET, POST",
     credentials: true
 }));
 
-app.use(express.json()); // Ensure JSON body parsing
+app.use(express.json()); 
 
 // ✅ Import and use routes from Farmer.js (if it contains routes)
 const farmerRoutes = require("./Farmer.js");
