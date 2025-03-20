@@ -5,13 +5,15 @@ const port = 4000;
 app.get("/", (req, res) => {
     res.send("Hello, running!");
   });
-  const cors = require("cors");
 
-app.use(cors({
-  origin: "https://farm-app-fk44.vercel.app",
-  methods: "GET,POST,PUT,DELETE",
-  credentials: true
-}));
+
+  const cors = require("cors");
+  app.use(cors({
+    origin: "*", // Allow all origins (change this later for security)
+    methods: "GET,POST",
+    credentials: true
+  }));
+  
 
 
 // Start the server

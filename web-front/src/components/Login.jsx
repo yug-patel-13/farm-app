@@ -39,7 +39,7 @@ const Login = ({setloginchange}) => {
     setloginchange("welcome")
 
     try {
-      const response = await axios.post('https://farm-app-nine.vercel.app/api/agritech', {
+      const response = await axios.post('https://farm-b6becpaam.vercel.app/api/agritech', {
         name,
         email,
         password,
@@ -59,7 +59,7 @@ const Login = ({setloginchange}) => {
   };
 const verif=async()=>{
   try {
-    const response = await axios.post('https://farm-b6becpaam-yug-patels-projects-da7fd301.vercel.app/sendotp', {email});
+    const response = await axios.post('https://farm-b6becpaam.vercel.app/sendotp', {email});
 if(!email)
 {
   alert("please fill the name or email");
